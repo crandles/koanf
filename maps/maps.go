@@ -5,6 +5,7 @@ package maps
 
 import (
 	"fmt"
+	"maps"
 	"reflect"
 	"strings"
 
@@ -12,6 +13,7 @@ import (
 )
 
 func Example[S ~[]E, E any](x S) (string, error) {
+	fmt.Println(maps.Clone(map[string]string{"a": "b"})) // maps was introduce in go 1.21
 	return fmt.Sprintf("%v", x), nil
 }
 
