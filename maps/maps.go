@@ -11,6 +11,10 @@ import (
 	"github.com/mitchellh/copystructure"
 )
 
+func Example[S ~[]E, E any](x S) (string, error) {
+	return fmt.Sprintf("%v", x), nil
+}
+
 // Flatten takes a map[string]interface{} and traverses it and flattens
 // nested children into keys delimited by delim.
 //
